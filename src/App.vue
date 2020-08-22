@@ -1,31 +1,61 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
-  </div>
+  <v-app>
+    <v-navigation-drawer app>
+    Menu lateral
+    </v-navigation-drawer>
+
+    <v-app-bar
+      app
+      color="black"
+      dense
+      dark
+    >
+      <div class="d-flex align-center">
+        <v-img
+          alt="Vuetify Logo"
+          class="shrink mr-2"
+          contain
+          src="img/logo-symbol.png"
+          transition="scale-transition"
+          width="32"
+        />
+
+        <h1 class="title">Lonok</h1>
+      </div>
+
+
+      <v-spacer></v-spacer>
+
+      <v-btn
+        href="https://telegram.me/leonardofilipe"
+        target="_blank"
+        color="primary"
+        depressed
+        small
+      >
+        <v-icon>mdi-search</v-icon>
+        <span class="mr-2">contato</span>
+      </v-btn>
+    </v-app-bar>
+
+    <v-main>
+      <router-view/>
+    </v-main>
+  </v-app>
 </template>
 
+<script>
+
+export default {
+  name: 'App',
+
+  data: () => ({
+    //
+  }),
+};
+</script>
+
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
+#app{ background-color: #e1e1e1!important; }
+h1,h2,h3,h4,h5 { font-family:'Viga'; }
 </style>

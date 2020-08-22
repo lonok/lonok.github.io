@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.4cfd637f4c53cf71ee9ecc3b10b149f2.js"
+  "/precache-manifest.bae1759af8d7fc6ad23b084eb1486e15.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "lonok"});
